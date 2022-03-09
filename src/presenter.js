@@ -77,4 +77,8 @@ function descuento(cantidad)
   {
     return 10;
   }
+  else if (cantidad => 30000) 
+  {
+    return 15;
+  }
 }
