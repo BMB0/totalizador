@@ -12,6 +12,7 @@ const codigo_estado = document.querySelector("#codigo-estado");
 const div_codigo_estado = document.querySelector("#codigo-estado-div"); 
 
 const div_impuesto_estado = document.querySelector("#impuesto-estado-div");
+const div_descuento = document.querySelector("#descuento-div");
 
 const div_precio_neto = document.querySelector("#precio-neto-div");
 
@@ -26,6 +27,8 @@ form.addEventListener("submit", (event) => {
   div_codigo_estado.innerHTML = "<p> Codigo del Estado de "+ codigo_estado.value +": " + porcentaje_estado(codigo_estado.value) + "%</p>";
   div_impuesto_estado.innerHTML = "<p> Monto de Impuesto para el Estado de "+ codigo_estado.value +": " + monto_impuesto_estado(codigo_estado.value, precio_neto) + "</p>";
   
+  div_descuento.innerHTML = "<p> Descuento : " + descuento(cantidad_item.value) + "%</p>";
+
   div_precio_neto.innerHTML = "<p> Precio Neto: " + precio_neto + "</p>";
 
 });
@@ -49,5 +52,17 @@ function monto_impuesto_estado(estado, monto)
     case 'AL': return (4 * monto)/100; break;
     case 'NV': return (8 * monto)/100;break;
     case 'UT': return (6.65 * monto)/100;break;
+  }
+}
+
+function descuento(cantidad)
+{
+  if (cantidad < 1000) 
+  {
+    return 0;
+  }
+  else if ((cantidad => 1000) && (cantidad < 3000)) 
+  {
+    return 3;
   }
 }
