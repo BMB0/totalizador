@@ -65,4 +65,8 @@ function descuento(cantidad)
   {
     return 3;
   }
+  else if ((cantidad => 3000) && (cantidad < 7000)) 
+  {
+    return 5;
+  }
 }
