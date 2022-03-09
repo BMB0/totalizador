@@ -23,16 +23,16 @@ form.addEventListener("submit", (event) => {
    
   var precio_neto = precio_item.value * cantidad_item.value;
   div_cantidad_item.innerHTML = "<p> Cantidad de item: " + cantidad_item.value + "</p>";
-  div_precio_item.innerHTML = "<p> Precio de item: " + precio_item.value + "</p>";
+  div_precio_item.innerHTML = "<p> Precio de item: " + precio_item.value + " $</p>";
 
   div_codigo_estado.innerHTML = "<p> Codigo del Estado de "+ codigo_estado.value +": " + porcentaje_estado(codigo_estado.value) + "%</p>";
-  div_impuesto_estado.innerHTML = "<p> Monto de Impuesto para el Estado de "+ codigo_estado.value +": " + monto_impuesto_estado(codigo_estado.value, precio_neto) + "</p>";
+  div_impuesto_estado.innerHTML = "<p> Monto de Impuesto para el Estado de "+ codigo_estado.value +": " + monto_impuesto_estado(codigo_estado.value, precio_neto) + " $</p>";
   var monto_descuento = (descuento(cantidad_item.value)*precio_neto)/100;
-  div_descuento.innerHTML = "<p> Descuento ( " + descuento(cantidad_item.value) + "%): "+ monto_descuento + "</p>";
+  div_descuento.innerHTML = "<p> Descuento ( " + descuento(cantidad_item.value) + "%): "+ monto_descuento + " $</p>";
 
-  div_precio_neto.innerHTML = "<p> Precio Neto: " + precio_neto + "</p>";
+  div_precio_neto.innerHTML = "<p> Precio Neto: " + precio_neto + " $</p>";
 
-  div_precio_total.innerHTML = "<p> Precio Total: " + (precio_neto - monto_descuento +monto_impuesto_estado(codigo_estado.value, precio_neto))  + "</p>";
+  div_precio_total.innerHTML = "<p> Precio Total: " + (precio_neto - monto_descuento +monto_impuesto_estado(codigo_estado.value, precio_neto))  + " $</p>";
 
 });
 
