@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
   div_codigo_estado.innerHTML = "<p> Codigo del Estado de "+ codigo_estado.value +": " + porcentaje_estado(codigo_estado.value) + "%</p>";
   div_impuesto_estado.innerHTML = "<p> Monto de Impuesto para el Estado de "+ codigo_estado.value +": " + monto_impuesto_estado(codigo_estado.value, precio_neto) + "</p>";
   
-  div_descuento.innerHTML = "<p> Descuento : " + descuento(cantidad_item.value) + "%</p>";
+  div_descuento.innerHTML = "<p> Descuento ( " + descuento(cantidad_item.value) + "%): "+ (descuento(cantidad_item.value)*precio_neto)/100 + "</p>";
 
   div_precio_neto.innerHTML = "<p> Precio Neto: " + precio_neto + "</p>";
 
