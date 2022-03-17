@@ -1,30 +1,32 @@
 <html>
-  <body>
-    <h1>Totalizador</h1>
-    <form id="totalizador-form">
-      <label for="cantidad-item">Cantidad de Item: </label>
-      <input type="number" id="cantidad-item"/>
-      <label for="precio-item">Precio por Item: </label>
-      <input type="number" id="precio-item"/>
-      <label for="cars">Codigo de Estado: </label>
-      <select id="codigo-estado">
-        <option value="UT">UT</option>
-        <option value="NV">NV</option>
-        <option value="TX">TX</option>
-        <option value="AL">AL</option>
-        <option value="CA">CA</option>
-      </select>
-      <input type="submit" value="Totalizar" />
-    </form>
-    <div id="cantidad-item-div"></div>
-    <div id="precio-item-div"></div>
-    <div id="codigo-estado-div"></div>
-    <div id="impuesto-estado-div"></div>
-    <div id="descuento-div"></div>
-    <div id="precio-neto-div"></div>
-    <div id="precio-total-div"></div>
-    
 
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+<body>
+  <h1>Totalizador</h1>
+  <form id="totalizador-form">
+    <label for="cantidad-item">Cantidad de Item: </label>
+    <input type="number" id="cantidad-item" />
+    <label for="precio-item">Precio por Item: </label>
+    <input type="number" id="precio-item" />
+    <label for="cars">Codigo de Estado: </label>
+    <select id="codigo-estado">
+      <option value="UT">UT</option>
+      <option value="NV">NV</option>
+      <option value="TX">TX</option>
+      <option value="AL">AL</option>
+      <option value="CA">CA</option>
+    </select>
+    <input type="submit" value="Totalizar" />
+  </form>
+  <div id="cantidad-item-div"></div>
+  <div id="precio-item-div"></div>
+  <div id="codigo-estado-div"></div>
+  <div id="impuesto-estado-div"></div>
+  <div id="descuento-div"></div>
+  <div id="precio-neto-div"></div>
+  <div id="precio-total-div"></div>
+
+
+  <script type="module" src="./src/presenter.js"></script>
+</body>
+
 </html>
